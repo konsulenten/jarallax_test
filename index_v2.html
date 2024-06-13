@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section Test with Jarallax</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 200%;
+            font-family: Arial, sans-serif;
+        }
+
+        .jarallax {
+            position: fixed; /* Make the jarallax element fixed */
+            top: 0; /* Position it at the top of the viewport */
+            left: 0;
+            right: 0; /* Stretch it to full width */
+            height: 600px; /* Set a fixed height */
+            overflow: hidden;
+            z-index: -1; /* Place it behind other content */
+        }
+
+        .fixed-image-container {
+            position: relative;
+            height: 600px; /* Adjust the height as needed */
+            overflow: hidden;
+        }
+
+        .fixed-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .content-container {
+            position: relative;
+            z-index: 1;
+            /* Additional styles for the content container */
+        }
+
+        .hero-content-box {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: black;
+            padding: 30px;
+            max-width: 470px;
+            width: 100%;
+            z-index: 1;
+            color: white;
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: white;
+        }
+
+        .hero-content h3 {
+            font-size: 1em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .hero-content p {
+            font-size: .8em;
+            margin-bottom: 15px;
+        }
+
+        .image-section {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            height: 360px; /* or any fixed height you want */
+            margin-top: 80px; /* Adjust to create space between sections */
+        }
+  
+        .image-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 1);
+            color: white;
+            padding: 15px 20px ;
+            width: 280px;
+            transition: transform 0.5s ease-out;
+            p {
+                font-size: .7em;
+            }
+        }
+
+        .images-section {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            height: auto; /* Adjust as needed */
+            margin-top: 80px; /* Adjust to create space between sections */
+            width: 720px;
+            margin: 0 auto; /* Center the image if it is not full width */
+        }
+
+        .images-section .image {
+            background-size: cover;
+            background-position: center;
+            height: 360px; /* or any fixed height you want */
+        }
+
+        .images-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 1);
+            color: white;
+            padding: 15px 20px ;
+            width: 280px;
+            transition: transform 0.5s ease-out;
+            p {
+                font-size: .7em;
+            }
+        }
+    </style>
+    <!-- Include Foundation for Sites CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css">
+    <!-- Include Jarallax CSS and JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.8/jarallax.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.8/jarallax.min.js"></script>
+</head>
+<body>
+        <!-- HERO section -->
+
+    <div class="jarallax" data-jarallax data-speed="0.5">
+        <div class="fixed-image-container">
+            <img src="../images/Lasse_poster.jpg" alt="Fixed Image" class="fixed-image">
+        </div>
+        <div class="content-container">
+            <div class="hero-content-box">
+                <h1 class="hero-title">Langlesing: Endelig har jeg et fagbrev i handa</h1>
+                <div class="hero-content">
+                    <h3>Som 16-åring forlot Lasse skolebenken og tenkte han aldri skulle tilbake igjen.</h3>
+                    <p>– På den tiden kunne man få seg jobb uten utdanning. Jeg var så lei av skolen – ville bare begynne å tjene penger og la humla suse.</p>
+                    <p>Etter mange år med fysisk krevende arbeid forstod Lasse at han måtte tenke nytt. Men han var godt voksen og ufaglært – mulighetene stod ikke akkurat i kø. Så oppdaget han Menn i helse.</p>
+                    <p>– Det var nesten som å vinne i Lotto!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional sections -->
+    <div class="content" id="lr">
+        <div class="inner-content">
+            <!-- Image Section 1 -->
+            <div class="image-section section-1 fixed-width" style="background-image: url('../images/lasse_01.jpg');" data-scroll-speed="4" data-layer="3">
+                <div class="image-caption">
+                    <p>Lasse bekymret seg for å begynne på skole igjen. Det skulle vise seg at han tok feil.</p>
+                </div>
+            </div>
+
+            <!-- Content section 1 -->
+            <div class="grid-container modul">
+                <div class="section-content grid-x grid-margin-x align-spaced">
+                    <div class="cell small-12 medium-7 large-4 DESC">
+                        <section class="entry-content" itemprop="articleBody">
+                            <h3>Vant over frykten</h3>
+                            <p>Lasse har dysleksi og strever med å lese og skrive. Å skulle begynne på et komprimert utdanningsløp var skummelt. Ville han henge med?</p>
+                            <p>– Det viste seg at alt er annerledes enn da jeg gikk på skolen. Nå er det lydbøker og muntlige prøver. Det gikk over all forventning, det gikk virkelig kjempebra!</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Section 2 -->
+            <div class="image-section section-3 fixed-width" style="background-image: url('../images/lasse_02.jpg');" data-scroll-speed="3" data-layer="1">
+                <div class="image-caption">
+                    <p>- Vi får fantastisk hjelp og støtte gjennom hele utdanningsløpet og veksler mellom skole og praksis.</p>
+                </div>
+            </div>
+
+            <!-- Content section 2 -->
+            <div class="grid-container modul">
+                <div class="section-content grid-x grid-margin-x align-spaced">
+                    <div class="cell small-12 medium-7 large-4 DESC">
+                        <section class="entry-content" itemprop="articleBody">
+                            <h3>Endelig et fagbrev</h3>
+                            <p>For Lasse har det betydd mye å få et fagbrev. Fagprøven som helsefagarbeider ble bestått med glans.</p>
+                            <p>– Jeg strevde på skolen og jeg har kjent litt på dette at jeg aldri fikk meg en utdannelse. Nå har jeg et bevis på at jeg kan noe. Jeg har en ettertraktet kompetanse.</p>
+                            <h5>I følge SSB blir det en voksende mangel på helsefagarbeidere i de kommende årene. Jobbmulighetene er svært gode.</h5>
+                            <h3>Rett i jobb</h3>
+                            <p>Allerede før fagprøven var avlagt fikk Lasse jobbtilbud.</p>
+                            <p>– Noe av det som er så bra med Menn i helse er at det er så mye praksis. Da får man vist seg frem til arbeidsgiver. Jeg fikk tidlig beskjed av sjefen om at ville jeg få fast jobb så fort jeg tok fagbrevet.</p>
+                            <blockquote><p>Nå har jeg arbeid å gå til resten av karrieren</p></blockquote>
+                            <p>Jeg behøver aldri tenke på å bli arbeidsledig. Og jeg har kollegaer på over sytti, så jeg håper å fortsette i yrket i mange år fremover.</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Section 3 -->
+            <div class="images-section section-5 fixed-width" data-scroll-speed="10" data-layer="1">
+                <div class="image image-1" style="background-image: url('../images/lasse_1_av_2.jpg');">
+                    <div class="image-caption">
+                        <p>- Det er slik en positiv energi på jobb. Jeg går hjem og føler meg lykkelig!</p>
+                    </div>
+                </div>
+                <div class="image image-2" style="background-image: url('../images/lasse_2_av_2.jpg');"></div>
+            </div>
+
+            <!-- Hero with Text Section -->
+            <div class="hero-full section-6" style="background-image: url('../images/bilde_eldre_dame.jpg'); height: 600px; margin-bottom: 450px;">
+                <div class="grid-x align-center">
+                    <div class="cell small-12 medium-7 large-4 hero-content-box">
+                        <div class="image-caption">
+                            <p>Her er bildetekst for et bakgrunnsbilde i et hero-felt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Foundation for Sites JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+    <script>
+        // Initialize Foundation
+        $(document).foundation();
+
+        // Initialize Jarallax
+        document.addEventListener('DOMContentLoaded', function() {
+            jarallax(document.querySelectorAll('.jarallax'), {
+                speed: 0, // Set the speed to 0 to keep the image fixed
+                imgWidth: 'auto', // Preserve the image's original width
+                imgHeight: 'auto', // Preserve the image's original height
+                keepImg: true, // Keep the image in its original position
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section Test with Jarallax</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 200%;
+            font-family: Arial, sans-serif;
+        }
+
+        .jarallax {
+    position: fixed; /* Make the jarallax element fixed */
+    top: 0; /* Position it at the top of the viewport */
+    left: 0;
+    right: 0; /* Stretch it to full width */
+    height: 600px; /* Set a fixed height */
+    overflow: hidden;
+    z-index: -1; /* Place it behind other content */
+}
+
+.fixed-image-container {
+    position: relative;
+    height: 600px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.fixed-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content-container {
+    position: relative;
+    z-index: 1;
+    /* Additional styles for the content container */
+}
+
+        .jarallax-img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-content-box {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: black;
+            padding: 30px;
+            max-width: 470px;
+            width: 100%;
+            z-index: 1;
+            color: white;
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: white;
+        }
+
+        .hero-content h3 {
+            font-size: 1em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .hero-content p {
+            font-size: .8em;
+            margin-bottom: 15px;
+        }
+    </style>
+    <!-- Include Jarallax CSS and JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.8/jarallax.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.8/jarallax.min.js"></script>
+</head>
+<body>
+    <div class="jarallax" data-jarallax data-speed="0.5">
+        
+        <div class="fixed-image-container">
+            <img src="../images/Lasse_poster.jpg" alt="Fixed Image" class="fixed-image">
+        </div>
+        <div class="content-container">
+            <div class="hero-content-box">
+                <h1 class="hero-title">Langlesing: Endelig har jeg et fagbrev i handa</h1>
+                <div class="hero-content">
+                    <h3>Som 16-åring forlot Lasse skolebenken og tenkte han aldri skulle tilbake igjen.</h3>
+                    <p>– På den tiden kunne man få seg jobb uten utdanning. Jeg var så lei av skolen – ville bare begynne å tjene penger og la humla suse.</p>
+                    <p>Etter mange år med fysisk krevende arbeid forstod Lasse at han måtte tenke nytt. Men han var godt voksen og ufaglært – mulighetene stod ikke akkurat i kø. Så oppdaget han Menn i helse.</p>
+                    <p>– Det var nesten som å vinne i Lotto!</p>
+                </div>
+            </div>
+            <!-- Additional content goes here -->
+        </div>
+        
+    </div>
+
+    <script>
+        // Initialize Jarallax
+
+        document.addEventListener('DOMContentLoaded', function() {
+            jarallax(document.querySelectorAll('.jarallax'), {
+    speed: 0, // Set the speed to 0 to keep the image fixed
+    imgWidth: 'auto', // Preserve the image's original width
+    imgHeight: 'auto', // Preserve the image's original height
+    keepImg: true, // Keep the image in its original position
+});
+});
+    </script>
+</body>
+</html>
